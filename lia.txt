@@ -1,0 +1,8 @@
+@inproceedings{
+wang2022latent,
+title={Latent Image Animator: Learning to Animate Images via Latent Space Navigation},
+author={Yaohui Wang and Di Yang and Francois Bremond and Antitza Dantcheva},
+booktitle={International Conference on Learning Representations},
+year={2022},
+url={https://openreview.net/forum?id=7r6kDq0mK_}
+}
