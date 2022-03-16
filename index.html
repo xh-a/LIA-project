@@ -55,18 +55,19 @@ BODY {
 <body>
 
 <div id="primarycontent">
-<center><h2>Latent Image Animator: Learning to Animate Images via Latent Space Navigation</h2></center>
-<center><h3>In ICLR 2022 </h3></center>
+<center><h1>Latent Image Animator: Learning to Animate Images via Latent Space Navigation</h1></center>
+<center><h2>In ICLR 2022 </h2></center>
 
 <center>
-<h4>
+<h2>
   <a href="http://www-sop.inria.fr/members/Yaohui.Wang">Yaohui Wang</a>&nbsp;&nbsp;&nbsp;
   <a href="https://scholar.google.com/citations?user=Q-koPr0AAAAJ&amp;hl=zh-CN">Di Yang</a>&nbsp;&nbsp;&nbsp;
   <a href="http://www-sop.inria.fr/members/Francois.Bremond/">Fraçnois Brémond</a>&nbsp;&nbsp;&nbsp;
   <a href="http://antitza.com/">Antitza Dantcheva</a>&nbsp;&nbsp;&nbsp;
-</h4>
+</h2>
 </center>
-<center><h4>Inria, Université Côte d'Azur</h4></center>
+<center><h2>Inria, Université Côte d'Azur</h2></center>
+<br>
 
 <center>
 <img src="file:///Users/sirius/Desktop/LIA-project/imgs/inria_logo.png" style="max-width:15%;vertical-align:top">
@@ -74,24 +75,25 @@ BODY {
 </center>
 
 <center>
-		  <h3>
+		  <h2>
 		  	<a href="https://openreview.net/pdf?id=7r6kDq0mK_" class="text-info">[PDF]</a>
 			<a href="file:///Users/sirius/Desktop/LIA-project/index.html" class="text-info">[arXiv]</a>
 	        <a href="https://github.com/wyhsirius/LIA" class="text-info">[Code (coming soon)]</a>
 		  	<a href="file:///Users/sirius/Desktop/LIA-project/lia.txt" class="text-info">[Bibtex]</a>
-	      </h3>
+	      </h2>
+		  <br>
 	      <img src="file:///Users/sirius/Desktop/LIA-project/imgs/teaser.png" title="" style="max-width:70%;vertical-align:top">
 </center>
 
 
 <p>
-</p><h2>Abstract</h2>
+</p><h1>Abstract</h1>
 
 <div style="font-size:14px"><p align="justify">
 Due to the remarkable progress of deep generative models, animating images has become increasingly efficient, whereas associated results have become increasingly realistic. Current animation-approaches commonly exploit structure representation extracted from driving videos. Such structure representation is instrumental in transferring motion from driving videos to still images. However, such approaches fail in case that a source image and driving video encompass large appearance variation. Moreover, the extraction of structure information requires additional modules that endow the animation-model with increased complexity. Deviating from such models, we here introduce the Latent Image Animator (LIA), a self-supervised autoencoder that evades need for structure representation. LIA is streamlined to animate images by linear navigation in the latent space. Specifically, motion in generated video is constructed by linear displacement of codes in the latent space. Towards this, we learn a set of orthogonal motion directions simultaneously, and use their linear combination, in order to represent any displacement in the latent space. Extensive quantitative and qualitative analysis suggests that our model systematically and significantly outperforms state-of-art methods on VoxCeleb, Taichi and TED-talk datasets w.r.t. generated quality.
 </p></div>
 
-<h2>Overview</h2>
+<h1>Overview</h1>
 <div style="font-size:14px"><p align="justify">
 LIA is an autoencoder consisting of two networks, an encoder E and a generator G. In the latent space, we apply Linear Motion Decomposition (LMD) towards learning
 a motion dictionary, which is an orthogonal basis where each vector represents a basic visual transformation. (a) During training, LIA takes two frames sampled from the same video sequence as source and driving image respectively. (b) In testing time, LIA is able to transfer motion from unseen videos to unseen images without fine-tuning.
@@ -100,7 +102,7 @@ a motion dictionary, which is an orthogonal basis where each vector represents a
 <img src="file:///Users/sirius/Desktop/LIA-project/imgs/overview_test.gif" width="490">
 
 
-<h2>Talking Head Animation</h2>
+<h1>Talking Head Animation</h1>
 <video width="500" autoplay="" controls="" loop="">
 		<source src="imgs/vox256.m4v" type="video/mp4">
 	</video><video width="500" autoplay="" controls="" loop="">
@@ -113,7 +115,7 @@ a motion dictionary, which is an orthogonal basis where each vector represents a
 
 </table>
 
-<h2>Motion Dictionary Linear Manipulation</h2>
+<h1>Motion Dictionary Linear Manipulation</h1>
 <video width="500" autoplay="" controls="" loop="">
 		<source src="imgs/vox256_linear_manipulation.m4v" type="video/mp4">
 	</video><video width="500" autoplay="" controls="" loop="">
@@ -134,7 +136,7 @@ a motion dictionary, which is an orthogonal basis where each vector represents a
 
 </table>
 
-<h2>Comparison with SOTA</h2>
+<h1>Comparison with SOTA</h1>
 <video width="500" autoplay="" controls="" loop="">
 		<source src="imgs/comparison_vox.m4v" type="video/mp4">
 	</video><video width="500" autoplay="" controls="" loop="">
@@ -147,7 +149,7 @@ a motion dictionary, which is an orthogonal basis where each vector represents a
 	
 </table>
 
-<h2>Acknowledgements</h2>
+<h1>Acknowledgements</h1>
 This work was granted access to the HPC resources of IDRIS under the allocation AD011011627R1. It was supported by the French Government, by the National Research Agency (ANR) under Grant
 ANR-18-CE92-0024, project RESPECT and through the 3IA Côte d’Azur Investments in the Future project managed by the National Research Agency (ANR) with the reference number ANR-19-P3IA-0002.
 
