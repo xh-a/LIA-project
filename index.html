@@ -1,133 +1,133 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 
-<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
-   	
-        
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    	<meta name="description" content="Latent Image Animator: Learning to Animate Images via Latent Space Navigation">
-    	<meta name="author" content="STARS team">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    	<title>LIA</title>
-		
 
-    	<link href="css/bootstrap.min.css" rel="stylesheet">
-    	<link href="css/style.css" rel="stylesheet">
-    <script async="" src="file://www.google-analytics.com/analytics.js"></script><script src="lib.js" type="text/javascript"></script><script src="popup.js" type="text/javascript"></script><script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-53682931-1', 'auto');
-  ga('send', 'pageview');
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Latent Image Animator: Learning to Animate Images via Latent Space Navigation">
+	<meta name="author" content="STARS team">
 
-</script><script type="text/javascript">
-// redefining default features
-var _POPUP_FEATURES = 'width=500,height=300,resizable=1,scrollbars=1,titlebar=1,status=1';
-</script><link media="all" href="glab.css" type="text/css" rel="StyleSheet"><style type="text/css" media="all">
-IMG {
-	PADDING-RIGHT: 0px;
-	PADDING-LEFT: 0px;
-	FLOAT: center;
-	PADDING-BOTTOM: 0px;
-	PADDING-TOP: 0px
-}
-#primarycontent {
-	MARGIN-LEFT: auto; ; WIDTH: expression(document.body.clientWidth >1000? "1000px": "auto" ); MARGIN-RIGHT: auto; TEXT-ALIGN: left; max-width:1000px }
-BODY {
-	TEXT-ALIGN: center
-}
-</style><meta content="MSHTML 6.00.2800.1400" name="GENERATOR"><script src="b5m.js" id="b5mmain" type="text/javascript"></script></head>
+	<title>LIA</title>
+
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<script async="" src="file://www.google-analytics.com/analytics.js"></script>
+	<script src="lib.js" type="text/javascript"></script>
+	<script src="popup.js" type="text/javascript"></script>
+	<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-53682931-1', 'auto');
+		ga('send', 'pageview');
+
+	</script>
+	<script type="text/javascript">
+		// redefining default features
+		var _POPUP_FEATURES = 'width=500,height=300,resizable=1,scrollbars=1,titlebar=1,status=1';
+	</script>
+	<link media="all" href="glab.css" type="text/css" rel="StyleSheet">
+	<style type="text/css" media="all">
+		IMG {
+			PADDING-RIGHT: 0px;
+			PADDING-LEFT: 0px;
+			FLOAT: center;
+			PADDING-BOTTOM: 0px;
+			PADDING-TOP: 0px
+		}
+
+		#primarycontent {
+			MARGIN-LEFT: auto;
+			;
+			WIDTH: expression(document.body.clientWidth >1000? "1000px": "auto");
+			MARGIN-RIGHT: auto;
+			TEXT-ALIGN: left;
+			max-width: 1000px
+		}
+
+		BODY {
+			TEXT-ALIGN: center
+		}
+	</style>
+	<meta content="MSHTML 6.00.2800.1400" name="GENERATOR">
+	<script src="b5m.js" id="b5mmain" type="text/javascript"></script>
+</head>
 
 
 
 <body>
 
-<div id="primarycontent">
-<center><h1>Latent Image Animator: Learning to Animate Images via Latent Space Navigation</h1></center>
-<center><h2>In ICLR 2022 </h2></center>
+	<div id="primarycontent">
+		<center>
+			<h1>Latent Image Animator: Learning to Animate Images via Latent Space Navigation</h1>
+		</center>
+		<center>
+			<h2>In ICLR 2022 </h2>
+		</center>
 
-<center>
+		<center>
+			<img src="imgs/cover.gif" title="" style="max-width:70%;vertical-align:top">
+		</center>
 
-<h2>
-  <a href="http://www-sop.inria.fr/members/Yaohui.Wang">Yaohui Wang</a>&nbsp;&nbsp;&nbsp;
-  <a href="https://scholar.google.com/citations?user=Q-koPr0AAAAJ&amp;hl=zh-CN">Di Yang</a>&nbsp;&nbsp;&nbsp;
-  <a href="http://www-sop.inria.fr/members/Francois.Bremond/">François Brémond</a>&nbsp;&nbsp;&nbsp;
-  <a href="http://antitza.com/">Antitza Dantcheva</a>&nbsp;&nbsp;&nbsp;
-</h2>
-</center>
-<center><h2>Inria, Université Côte d'Azur</h2></center>
-<br>
+		<h1>Intro</h1>
 
-<center>
-<img src="imgs/inria_logo.png" style="max-width:15%;vertical-align:top">
-<img src="imgs/uca_logo.png" style="max-width:20%;vertical-align:top">
-</center>
+		<div style="font-size:14px">
+			<p align="justify" style="text-indent:2em;">
+				<font size="4">
+					由于深度生成模型的显着进步，动画图像变得越来越高效，而相关结果也变得越来越现实。近几年的动画方法通常利用从驾驶视频中提取的结构表示，这种结构表示有助于将运动从驾驶视频转移到静态图像。然而，如果源图像和驾驶视频包含较大的外观变化，这种方法就会失败。此外，结构信息的提取需要额外的模块，这使得动画模型变得更加复杂。
+				</font>
+				</p>
+			<p align="justify" style="text-indent:2em;">
+				<font size="4">
+					与此类模型不同，该工作在这里引入了潜在图像动画器（LIA），这是一种自我监督的自动编码器，由两个网络组成，编码器E和生成器G。在潜在空间中，通过应用线性运动分解（LMD）来学习一组正交运动方向，并使用它们的线性组合来表示潜在空间中的任何位移。LIA经过简化，可通过潜在空间中的线性导航来制作动画图像。具体来说，生成视频中的运动是通过潜在空间中代码的线性位移来构造的。广泛的定量和定性分析表明，模型在VoxCeleb、Taichi 和 TED-talk 数据集上系统地、显着地优于最先进的方法生成的质量。（a）在训练过程中，LIA 从同一视频序列中采样两帧，分别作为源图像和驾驶图像。（b） 在测试时间内，LIA能够在不进行微调的情况下将运动从未看到的视频转移到未看到的图像。
+				</font>
+			</p>
+		</div>
 
-<center>
-		  <h2>
-		  	<a href="https://openreview.net/pdf?id=7r6kDq0mK_" class="text-info">[PDF]</a>
-			<a href="https://arxiv.org/pdf/2203.09043.pdf" class="text-info">[arXiv]</a>
-	        <a href="https://github.com/wyhsirius/LIA" class="text-info">[Code]</a>
-		  	<a href="lia.txt" class="text-info">[Bibtex]</a>
-	      </h2>
-	      <img src="imgs/cover.gif" title="" style="max-width:70%;vertical-align:top">
-</center>
-
-<h1>Abstract</h1>
-
-<div style="font-size:14px"><p align="justify">
-Due to the remarkable progress of deep generative models, animating images has become increasingly efficient, whereas associated results have become increasingly realistic. Current animation-approaches commonly exploit structure representation extracted from driving videos. Such structure representation is instrumental in transferring motion from driving videos to still images. However, such approaches fail in case that a source image and driving video encompass large appearance variation. Moreover, the extraction of structure information requires additional modules that endow the animation-model with increased complexity. Deviating from such models, we here introduce the Latent Image Animator (LIA), a self-supervised autoencoder that evades need for structure representation. LIA is streamlined to animate images by linear navigation in the latent space. Specifically, motion in generated video is constructed by linear displacement of codes in the latent space. Towards this, we learn a set of orthogonal motion directions simultaneously, and use their linear combination, in order to represent any displacement in the latent space. Extensive quantitative and qualitative analysis suggests that our model systematically and significantly outperforms state-of-art methods on VoxCeleb, Taichi and TED-talk datasets w.r.t. generated quality.
-</p></div>
-
-<h1>Overview</h1>
-<div style="font-size:14px"><p align="justify">
-LIA is an autoencoder consisting of two networks, an encoder E and a generator G. In the latent space, we apply Linear Motion Decomposition (LMD) towards learning
-a motion dictionary, which is an orthogonal basis where each vector represents a basic visual transformation. (a) During training, LIA takes two frames sampled from the same video sequence as source and driving image respectively. (b) In testing time, LIA is able to transfer motion from unseen videos to unseen images without fine-tuning.
-</p></div>
-<img src="imgs/overview_train.png" width="490">
-<img src="imgs/overview_test.gif" width="490">
+		<img src="imgs/overview_train.png" width="490">
+		<img src="imgs/overview_test.gif" width="490">
 
 
-<h1>Talking Head Animation</h1>
-<video width="500" autoplay="" controls="" loop="">
-		<source src="imgs/vox256.m4v" type="video/mp4">
-	</video><video width="500" autoplay="" controls="" loop="">
-		<source src="imgs/vox512.m4v" type="video/mp4">
-	</video><table border="0" cellspacing="0" cellpadding="0">
-  
-</table>
+		<h1>Talking Head Animation</h1>
+		<video width="500" autoplay="" controls="" loop="">
+			<source src="imgs/vox256.m4v" type="video/mp4">
+		</video><video width="500" autoplay="" controls="" loop="">
+			<source src="imgs/vox512.m4v" type="video/mp4">
+		</video>
+		<table border="0" cellspacing="0" cellpadding="0">
 
-<h1>Motion Dictionary Linear Manipulation</h1>
-<video width="500" autoplay="" controls="" loop="">
-		<source src="imgs/vox256_linear_manipulation.m4v" type="video/mp4">
-	</video><video width="500" autoplay="" controls="" loop="">
-		<source src="imgs/vox512_linear_manipulation.m4v" type="video/mp4">
-	</video><video width="500" autoplay="" controls="" loop="">
-		<source src="imgs/ted_linear_manipulation.m4v" type="video/mp4">
-	</video><video width="500" autoplay="" controls="" loop="">
-		<source src="imgs/taichi_linear_manipulation.m4v" type="video/mp4">
-	</video><table border="0" cellspacing="0" cellpadding="0">
-  	
+		</table>
 
-</table>
+		<h1>Motion Dictionary Linear Manipulation</h1>
+		<video width="500" autoplay="" controls="" loop="">
+			<source src="imgs/vox256_linear_manipulation.m4v" type="video/mp4">
+		</video><video width="500" autoplay="" controls="" loop="">
+			<source src="imgs/vox512_linear_manipulation.m4v" type="video/mp4">
+		</video><video width="500" autoplay="" controls="" loop="">
+			<source src="imgs/ted_linear_manipulation.m4v" type="video/mp4">
+		</video><video width="500" autoplay="" controls="" loop="">
+			<source src="imgs/taichi_linear_manipulation.m4v" type="video/mp4">
+		</video>
+		<table border="0" cellspacing="0" cellpadding="0">
 
-<h1>Comparison with SOTA</h1>
-<video width="500" autoplay="" controls="" loop="">
-		<source src="imgs/comparison_vox.m4v" type="video/mp4">
-	</video><video width="500" autoplay="" controls="" loop="">
-		<source src="imgs/comparison_taichi&amp;ted.m4v" type="video/mp4">
-	</video><table border="0" cellspacing="0" cellpadding="0">
-  	
-	
-</table>
 
-<h1>Acknowledgements</h1>
-<div style="font-size:14px"><p align="justify">
-This work was granted access to the HPC resources of IDRIS under the allocation AD011011627R1. It was supported by the French Government, by the National Research Agency (ANR) under Grant
-ANR-18-CE92-0024, project RESPECT and through the 3IA Côte d’Azur Investments in the Future project managed by the National Research Agency (ANR) with the reference number ANR-19-P3IA-0002.
-</p></div>
+		</table>
 
-</div>
-</body></html>
+		<h1>Experience</h1>
+		<font size="4">
+			<a href="https://deathpolca.github.io/seminar_2024_web/">实验结果</a>
+		</font>
+	</div>
+</body>
+
+</html>
